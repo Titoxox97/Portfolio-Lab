@@ -17,7 +17,7 @@ function App() {
       <GlobalStyle />
 
       <ThemeProvider theme={lightMode}>
-        <Switch>
+        <Switch location={location} key={location.pathname}>
           <Route exact path="/" component={Main} />
           <Route exact path="/about" component={About} />
           <Route exact path="/blog" component={BlogPage} />
