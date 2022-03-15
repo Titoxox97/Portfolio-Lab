@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import PowerButton from "../MiniComponents/PowerButton";
+import LogoCompo from "../MiniComponents/LogoComp";
+import SocialComp from "../MiniComponents/SocialComp";
 
 const MainContainer = styled.div`
   background: ${(props) => props.theme.body};

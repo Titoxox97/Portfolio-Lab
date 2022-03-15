@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import { darkMode } from '../components/Themes'
 
 const Logo = styled.h1`
 display: inline-block;
-color: ${props => props.color === 'dark' ? DarkTheme.text : DarkTheme.body};
+color: ${props => props.color === 'dark' ? darkMode.text : darkMode.body};
 font-family: 'Pacifico',cursive;
 
 position: fixed;
@@ -15,7 +16,7 @@ z-index:3;
 
 const LogoCompo = () => {
   return (
-    <Logo>
+    <Logo color={props.theme}>
         MA
     </Logo>
   )

@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import styled from 'styled-components'
 import { Github, Linkedin, Facebook, Instagram } from '../components/AllSvgs'
+import {darkMode} from '../components/Themes'
 
 
 
@@ -22,36 +24,37 @@ z-index:3;
 
 `
 
-const Line = styled(motion.span)`
+const Line = styled.span`
 width: 2px;
 height: 8rem;
-background-color: ${props => props.color === 'dark' ? DarkTheme.text : DarkTheme.body  };
+background-color:${props => props.theme.text};
 `
+
 
 const SocialComp = () => {
   return (
     <Icons>
         <div>
-         <NavLink to="/">
-         <Github width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text  : DarkTheme.body  } />
+         <NavLink style={{color:'inherit'}} target="_blank"   to={{pathname:"https://github.com/codebucks27"}}>
+         <Github width={25} height={25} fill={props.theme === "dark" ? darkMode.text  : darkMode.body  } />
          </NavLink>
         </div>
 
         <div>
-         <NavLink to="/">
-         <Linkedin width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text  : DarkTheme.body  } />
+         <NavLink style={{color:'inherit'}} target="_blank"   to={{pathname:"https://github.com/codebucks27"}}>
+         <Linkedin width={25} height={25} fill={props.theme === "dark" ? darkMode.text  : darkMode.body  } />
          </NavLink>
         </div>
 
         <div>
-         <NavLink to="/">
-         <Facebook width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text  : DarkTheme.body  } />
+         <NavLink style={{color:'inherit'}} target="_blank"   to={{pathname:"https://github.com/codebucks27"}}>
+         <Facebook width={25} height={25} fill={props.theme === "dark" ? darkMode.text  : darkMode.body  } />
          </NavLink>
         </div>
 
         <div>
-         <NavLink to="/">
-         <Instagram width={25} height={25} fill={props.theme === "dark" ? DarkTheme.text  : DarkTheme.body  } />
+         <NavLink style={{color:'inherit'}} target="_blank"   to={{pathname:"https://github.com/codebucks27"}}>
+         <Instagram width={25} height={25} fill={props.theme === "dark" ? darkMode.text  : darkMode.body  } />
          </NavLink>
         </div>
 
